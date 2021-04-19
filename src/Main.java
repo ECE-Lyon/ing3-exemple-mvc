@@ -23,6 +23,6 @@ public class Main {
                 System.out.println("Persisting " + arg + " to custom persister");
             }
         });
-        userManager.addUser("Pierre");
+        userManager.addUser("Paul");
     }
 }
