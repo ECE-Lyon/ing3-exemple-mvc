@@ -44,10 +44,6 @@ public class TemperatureCelsiusView implements Observer {
         });
     }
 
-    public void display(String temperature) {
-        this.temperatureTextField.setText(temperature);
-    }
-
     public double getTemperature() {
         double result = 0;
         try {
@@ -61,6 +57,6 @@ public class TemperatureCelsiusView implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        display("" + ((TemperatureModel) arg).getTemperatureCelsius());
+        this.temperatureTextField.setText(String.valueOf(((TemperatureModel) arg).getTemperatureCelsius()));
     }
 }
