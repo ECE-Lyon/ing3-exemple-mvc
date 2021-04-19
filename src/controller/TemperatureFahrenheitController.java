@@ -2,10 +2,10 @@ package controller;
 
 import model.TemperatureModel;
 
-public class TemperatureFarenheitController {
+public class TemperatureFahrenheitController {
     private final TemperatureModel temperatureModel;
 
-    public TemperatureFarenheitController(TemperatureModel temperatureModel) {
+    public TemperatureFahrenheitController(TemperatureModel temperatureModel) {
         this.temperatureModel = temperatureModel;
     }
 

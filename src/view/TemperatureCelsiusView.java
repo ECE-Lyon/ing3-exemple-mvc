@@ -12,7 +12,6 @@ import java.util.Observer;
 
 public class TemperatureCelsiusView implements Observer {
     private final JTextField temperatureTextField;
-    private TemperatureCelsiusController temperatureCelsiusController;
 
     public TemperatureCelsiusView(TemperatureCelsiusController temperatureCelsiusController) {
         JFrame jFrame = new JFrame();

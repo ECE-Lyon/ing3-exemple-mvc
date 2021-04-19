@@ -1,6 +1,6 @@
 package view;
 
-import controller.TemperatureFarenheitController;
+import controller.TemperatureFahrenheitController;
 import model.TemperatureModel;
 
 import javax.swing.*;
@@ -10,11 +10,11 @@ import java.awt.event.ActionListener;
 import java.util.Observable;
 import java.util.Observer;
 
-public class TemperatureFarenheitView implements Observer {
+public class TemperatureFahrenheitView implements Observer {
     private final JTextField temperatureTextField;
-    private TemperatureFarenheitController temperatureFarenheitController;
+    private TemperatureFahrenheitController temperatureFarenheitController;
 
-    public TemperatureFarenheitView(TemperatureFarenheitController temperatureFarenheitController) {
+    public TemperatureFahrenheitView(TemperatureFahrenheitController temperatureFarenheitController) {
         JFrame jFrame = new JFrame();
         jFrame.setVisible(true);
 

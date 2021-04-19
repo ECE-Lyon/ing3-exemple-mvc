@@ -1,20 +1,20 @@
 import controller.TemperatureCelsiusController;
-import controller.TemperatureFarenheitController;
+import controller.TemperatureFahrenheitController;
 import model.TemperatureModel;
 import view.TemperatureCelsiusView;
-import view.TemperatureFarenheitView;
+import view.TemperatureFahrenheitView;
 
 public class Main {
     public static void main(String[] args) {
         TemperatureModel temperatureModel = new TemperatureModel();
 
         TemperatureCelsiusController temperatureCelsiusController = new TemperatureCelsiusController(temperatureModel);
-        TemperatureFarenheitController temperatureFarenheitController = new TemperatureFarenheitController(temperatureModel);
+        TemperatureFahrenheitController temperatureFahrenheitController = new TemperatureFahrenheitController(temperatureModel);
 
         TemperatureCelsiusView temperatureCelsiusView = new TemperatureCelsiusView(temperatureCelsiusController);
-        TemperatureFarenheitView temperatureFarenheitView = new TemperatureFarenheitView(temperatureFarenheitController);
+        TemperatureFahrenheitView temperatureFahrenheitView = new TemperatureFahrenheitView(temperatureFahrenheitController);
 
         temperatureModel.addObserver(temperatureCelsiusView);
-        temperatureModel.addObserver(temperatureFarenheitView);
+        temperatureModel.addObserver(temperatureFahrenheitView);
     }
 }
