@@ -1,7 +1,7 @@
-package mvc.view;
+package view;
 
-import mvc.controller.TemperatureFarenheitController;
-import mvc.model.TemperatureModel;
+import controller.TemperatureFarenheitController;
+import model.TemperatureModel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,8 +11,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 public class TemperatureFarenheitView implements Observer {
-
-    private JTextField temperatureTextField;
+    private final JTextField temperatureTextField;
     private TemperatureFarenheitController temperatureFarenheitController;
 
     public TemperatureFarenheitView(TemperatureFarenheitController temperatureFarenheitController) {
@@ -53,7 +52,7 @@ public class TemperatureFarenheitView implements Observer {
     public double getTemperature() {
         double result = 0;
         try {
-            result = Double.valueOf(temperatureTextField.getText());
+            result = Double.parseDouble(temperatureTextField.getText());
         } catch (NumberFormatException e) {
             System.out.println("Error with input temperature");
         }

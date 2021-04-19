@@ -1,9 +1,8 @@
-package mvc.model;
+package model;
 
 import java.util.Observable;
 
 public class TemperatureModel extends Observable {
-
     private double temperatureCelsius = 0;
 
     public double getTemperatureCelsius() {

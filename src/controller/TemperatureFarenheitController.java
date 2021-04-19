@@ -1,10 +1,9 @@
-package mvc.controller;
+package controller;
 
-import mvc.model.TemperatureModel;
+import model.TemperatureModel;
 
 public class TemperatureFarenheitController {
-
-    private TemperatureModel temperatureModel;
+    private final TemperatureModel temperatureModel;
 
     public TemperatureFarenheitController(TemperatureModel temperatureModel) {
         this.temperatureModel = temperatureModel;

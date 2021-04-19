@@ -1,28 +1,20 @@
-import observer.DatabasePersister;
-import observer.FilePersister;
-import observer.UserManager;
-
-import java.util.Observable;
-import java.util.Observer;
+import controller.TemperatureCelsiusController;
+import controller.TemperatureFarenheitController;
+import model.TemperatureModel;
+import view.TemperatureCelsiusView;
+import view.TemperatureFarenheitView;
 
 public class Main {
     public static void main(String[] args) {
-        UserManager userManager = new UserManager();
+        TemperatureModel temperatureModel = new TemperatureModel();
 
-        DatabasePersister databasePersister = new DatabasePersister();
-        userManager.addObserver(databasePersister);
-        userManager.addObserver(new FilePersister());
+        TemperatureCelsiusController temperatureCelsiusController = new TemperatureCelsiusController(temperatureModel);
+        TemperatureFarenheitController temperatureFarenheitController = new TemperatureFarenheitController(temperatureModel);
 
-        userManager.addUser("Nicolas");
-        userManager.deleteObserver(databasePersister);
-        userManager.addUser("Pierre");
+        TemperatureCelsiusView temperatureCelsiusView = new TemperatureCelsiusView(temperatureCelsiusController);
+        TemperatureFarenheitView temperatureFarenheitView = new TemperatureFarenheitView(temperatureFarenheitController);
 
-        userManager.addObserver(new Observer() {
-            @Override
-            public void update(Observable o, Object arg) {
-                System.out.println("Persisting " + arg + " to custom persister");
-            }
-        });
-        userManager.addUser("Paul");
+        temperatureModel.addObserver(temperatureCelsiusView);
+        temperatureModel.addObserver(temperatureFarenheitView);
     }
 }
