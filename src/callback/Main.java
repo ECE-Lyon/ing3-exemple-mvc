@@ -1,7 +1,6 @@
 package callback;
 
 public class Main {
-
     public static void main(String[] args) {
         UserManager userManager = new UserManager();
         DatabasePersister databasePersister = new DatabasePersister();
@@ -12,12 +11,12 @@ public class Main {
         userManager.removeListener(databasePersister);
         userManager.addUser("Pierre");
 
-        UserManager userManager1 = new UserManager();
-        userManager1.addListener(new Persister() {
+        userManager.addListener(new Persister() {
             @Override
             public void persist(String name) {
 
             }
         });
+        userManager.addUser("Paul");
     }
 }
