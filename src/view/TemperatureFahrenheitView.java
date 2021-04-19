@@ -12,9 +12,8 @@ import java.util.Observer;
 
 public class TemperatureFahrenheitView implements Observer {
     private final JTextField temperatureTextField;
-    private TemperatureFahrenheitController temperatureFarenheitController;
 
-    public TemperatureFahrenheitView(TemperatureFahrenheitController temperatureFarenheitController) {
+    public TemperatureFahrenheitView(TemperatureFahrenheitController temperatureFahrenheitController) {
         JFrame jFrame = new JFrame();
         jFrame.setVisible(true);
 
@@ -40,7 +39,7 @@ public class TemperatureFahrenheitView implements Observer {
         temperatureSetButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                temperatureFarenheitController.updateTemperature(getTemperature());
+                temperatureFahrenheitController.updateTemperature(getTemperature());
             }
         });
     }
