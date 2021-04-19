@@ -1,11 +1,10 @@
-package callback2;
+package callback;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class UserManager {
-
-    private Set<Persister> persisters = new HashSet<>();
+    private final Set<Persister> persisters = new HashSet<>();
 
     public void addListener(Persister persister) {
         persisters.add(persister);

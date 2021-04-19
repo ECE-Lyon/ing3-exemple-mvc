@@ -1,6 +1,5 @@
-package callback2;
+package callback;
 
 public interface Persister {
-
     void persist(String name);
 }

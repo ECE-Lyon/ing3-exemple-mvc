@@ -1,4 +1,4 @@
-package callback2;
+package callback;
 
 public class FilePersister implements Persister {
     @Override
