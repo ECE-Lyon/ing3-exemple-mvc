@@ -14,7 +14,7 @@ public class Main {
         userManager.addListener(new Persister() {
             @Override
             public void persist(String name) {
-
+                System.out.println("Persisting " + name + " to custom persister");
             }
         });
         userManager.addUser("Paul");
